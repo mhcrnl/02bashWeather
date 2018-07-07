@@ -1,8 +1,17 @@
 #!/bin/sh
 
-# VERSION: 0.00.1
-# AUTHOR:  Mihai Cornel mhcrnl@gmail.
-# Vremea in locatia curenta afisata in terminal. 
+VERSION="VERSION: 0.00.1"
+AUTHOR="AUTHOR:  Mihai Cornel mhcrnl@gmail."
+HELP="Run: ./weather.sh"
+
+# Vremea in locatia curenta afisata in terminal.
+
+help()
+{
+    echo ${VERSION}
+    echo ${AUTHOR}
+    echo ${HELP}
+}
 
 usage()
 {
@@ -13,6 +22,7 @@ EOF
 
 vremea()
 {
+    help
     usage
     curl wttr.in
 }
